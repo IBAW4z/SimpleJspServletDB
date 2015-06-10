@@ -21,7 +21,7 @@ public class Product {
     public void setAmount(int amount) {
         this.amount = amount;
     }
-    public String getAmount() {
+    public int getAmount() {
         return amount;
     }
 
