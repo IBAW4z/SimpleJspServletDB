@@ -1,36 +1,28 @@
 package com.daniel.model;
 
-public class Fridge {
-	    private String name;
-	    private int amount;
-	    private int productID;
-	    private int userID;
-	    //dorobiæ pochodne klasy dla róznych typów sk³adników gdzie iloœæ
-	    // bêdzie zale¿eæ od typu sk³adnika np. ml dla p³ynów,
-	    // gramy dla sypkich ???
+import java.util.ArrayList;
 
-	    public void setName(String name) {
-	        this.name = name;
-	    }
-	    public String getName() {
-	        return name;
-	    }
-	    public void setAmount(int amount) {
-	        this.amount = amount;
-	    }
-	    public int getAmount() {
-	        return amount;
-	    }
-	    public void setProductID(int productID) {
-	        this.productID = productID;
-	    }
-	    public int getProductID() {
-	        return productID;
-	    }
-	    public void setUserID(int userID) {
+/**
+ * File module, class Fridge.java
+ * class of fridge
+ * Modified by Anna on 2015-06-11.
+ */
+
+public class Fridge {
+	private ArrayList<Product> products;
+	private int userID;
+
+	public void setUserID(int userID) {
 	        this.userID = userID;
 	    }
-	    public int getUserID() {
+	public int getUserID() {
 	        return userID;
 	    }
+	public void setProducts(ArrayList<Product> products) {
+		this.products = products;
+	}
+	public ArrayList<Product> getProducts() {
+		return products;
+	}
+
 }

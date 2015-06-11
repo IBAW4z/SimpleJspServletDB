@@ -5,10 +5,15 @@ package com.daniel.model;
  * class of products used in Recipe or present in Fridge
  * Created by Anna on 2015-06-10.
  */
+enum e_prodtype {
+    LOOSE, LIQUID, SPICE, MEAT, FISH, VEGETABLE, FRUIT
+}
+
 public class Product{
     private int product_id;
     private String name;
-    private int amount;
+    private e_prodtype product_type;
+    private int amount; //-->dopiero w przepisie i lodowce?
     //dorobić pochodne klasy dla róznych typów składników gdzie ilość
     // będzie zależeć od typu składnika np. ml dla płynów,
     // gramy dla sypkich ???
@@ -24,6 +29,12 @@ public class Product{
     }
     public String getName() {
         return name;
+    }
+    public void setProduct_type(e_prodtype product_type) {
+        this.product_type= product_type;
+    }
+    public e_prodtype getProduct_type() {
+        return product_type;
     }
     public void setAmount(int amount) {
         this.amount = amount;
